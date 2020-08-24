@@ -261,6 +261,6 @@ def play(board)
   if !(over?(board))
     turn(board)
   else
-    puts `Cat's game`
+
   end
 end
