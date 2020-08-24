@@ -262,6 +262,5 @@ def play(board)
     turn(board)
   else
     play(board)
-
   end
 end
