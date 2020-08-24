@@ -258,7 +258,7 @@ describe './lib/tic_tac_toe.rb' do
   end
 end
 def play(board)
-  if !(over?(board))
+  while !(over?(board))
     turn(board)
   end
 end
