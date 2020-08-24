@@ -60,7 +60,7 @@ def turn(board)
   converted = input_to_index(answer)
   if valid_move?(board,converted)
     move(board, converted, current_player(board))
-    display_board(board)    
+    display_board(board)
   else
     turn(board)
   end
