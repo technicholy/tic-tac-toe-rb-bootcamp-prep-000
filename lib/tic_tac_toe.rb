@@ -26,6 +26,9 @@ end
 def position_taken?(board, index)
     !(board[index].nil? || board[index] == " ")
 end
+def valid_move?(board, index)
+  position_taken?(board, index) ? false:true
+end
 def won?(board)
   WIN_COMBINATIONS.each do |pos1, pos2, pos3|
     moves = [board[pos1],board[pos2],board[pos3]]
