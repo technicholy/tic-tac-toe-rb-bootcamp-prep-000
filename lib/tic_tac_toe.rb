@@ -45,4 +45,3 @@ end
 def winner(board)
   (won?(board)) ? (return board[won?(board)[0]]) : nil
 end
-
