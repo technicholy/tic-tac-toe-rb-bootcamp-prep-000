@@ -258,14 +258,7 @@ describe './lib/tic_tac_toe.rb' do
   end
 end
 def play(board)
-  turn(board)
-  if over?(board)
-    if won?(board)
-      puts `The winner is #{(board[won?(board)[0]] == "X") ? "X":"O"}`
-    else
-      puts "Cat's Game!"
-    end
-  else
-   play(board)
+  if !(over?(board))
+    turn(board)
   end
 end
