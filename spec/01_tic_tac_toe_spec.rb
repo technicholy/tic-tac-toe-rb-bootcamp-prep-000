@@ -261,6 +261,6 @@ def play(board)
   if !(over?(board))
     turn(board)
   else
-    won?(board) ? (puts `Congratulations #{(board[won(board)[0]] == "X") ? "X":"O"}!`) : (puts "Cat's paw game.")
+    
   end
 end
