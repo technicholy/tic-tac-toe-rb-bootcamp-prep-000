@@ -54,3 +54,15 @@ end
 def winner(board)
   (won?(board)) ? (return board[won?(board)[0]]) : nil
 end
+def turn(board)
+  puts "Please enter a number: 1-9"
+  answer = gets.chomp
+  converted = input_to_index(answer)
+  if valid_move?(board,converted)
+    move(board, converted, current_player(board))
+    display_board(board)    
+  else
+    turn(board)
+  end
+
+end
