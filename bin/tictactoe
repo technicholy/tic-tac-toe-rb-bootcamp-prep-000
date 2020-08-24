@@ -8,10 +8,16 @@ puts "Welcome to Tic Tac Toe!"
 display_board(board)
 
 def play(board)
-  while !(over?(board))
-    turn(board)
-  end
+  if over?(board)
+    if won?(board)
+      puts `The winner is #{(board[won(board)[0]] == "X") ? "X":"O"}`
 
+    else
+
+    end
+  else
+    play(board)
+  end
 end
 
 play(board)
