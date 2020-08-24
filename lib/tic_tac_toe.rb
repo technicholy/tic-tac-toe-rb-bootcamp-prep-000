@@ -29,6 +29,9 @@ end
 def valid_move?(board, index)
   (index.between?(0, 8) && !(position_taken?(board, index))) ? true:false
 end
+def turn_count(board)
+  return board.count("X") + board.count("O")
+end
 def won?(board)
   WIN_COMBINATIONS.each do |pos1, pos2, pos3|
     moves = [board[pos1],board[pos2],board[pos3]]
