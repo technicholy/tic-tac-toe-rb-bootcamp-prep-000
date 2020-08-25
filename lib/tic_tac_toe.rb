@@ -69,5 +69,5 @@ def play(board)
   while !(over?(board))
     turn(board)
   end
-  won?(board) ? (puts "Congratulations #{current_player(board)}!") : (puts "Cat's game!")
+  won?(board) ? (puts "Congratulations #{!(current_player(board))}!") : (puts "Cat's game!")
 end
