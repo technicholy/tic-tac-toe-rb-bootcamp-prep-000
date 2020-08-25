@@ -263,5 +263,7 @@ def play(board)
   end
   if over?(board)
     won?(board) ? (puts `Congratulations #{current_player(board)}!`) : (puts "Cat's game")
+  else
+    play(board)
   end
 end
