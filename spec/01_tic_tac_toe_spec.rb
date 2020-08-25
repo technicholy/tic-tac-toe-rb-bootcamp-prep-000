@@ -261,4 +261,5 @@ def play(board)
   while !(over?(board))
     turn(board)
   end
+  won?(board) ? (puts "congratulate") : (puts "Cat's game")
 end
