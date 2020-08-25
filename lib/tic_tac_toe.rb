@@ -65,3 +65,9 @@ def turn(board)
     turn(board)
   end
 end
+def play(board)
+  while !(over?(board))
+    turn(board)
+  end
+  won?(board) ? (puts "Congratulations") : (puts "Cat's game")
+end
