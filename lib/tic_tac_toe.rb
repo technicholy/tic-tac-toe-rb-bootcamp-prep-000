@@ -36,7 +36,7 @@ def current_player(board)
   ((turn_count(board) % 2) == 1)? "O":"X"
 end
 def winning_player(board)
-  ((turn_count(board) % 2) == 1)? "X":"O"
+  (current_player(board) == "O")? "X":"O"
 end
 def won?(board)
   WIN_COMBINATIONS.each do |pos1, pos2, pos3|
@@ -72,6 +72,5 @@ def play(board)
   while !(over?(board))
     turn(board)
   end
-
   won?(board) ? (puts "Congratulations #{winning_player(board)}!") : (puts "Cat's Game!")
 end
