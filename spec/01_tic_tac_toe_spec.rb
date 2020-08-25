@@ -257,9 +257,3 @@ describe './lib/tic_tac_toe.rb' do
     end
   end
 end
-def play(board)
-  while !(over?(board))
-    turn(board)
-  end
-  won?(board) ? (puts "congratulate") : (puts "Cat's game")
-end
